@@ -61,7 +61,6 @@ function Coin() {
   const { coinId } = useParams<RouteParms>();
   const { state } = useLocation<RouteState>();
   const [type, setType] = useState("coin");
-  console.log(state);
 
   return (
     <Container>
