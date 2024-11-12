@@ -25,10 +25,8 @@ const Title = styled.h1`
   padding-bottom: 10px;
   border-bottom: 2px solid #007bff;
 `;
-interface TextProps {
-  coinType: "coin" | "token" | "";
-}
-const Text = styled.div<TextProps>`
+
+const Text = styled.div`
   background-color: #fff;
   margin: 8px 0;
   padding: 15px 20px;
@@ -68,12 +66,10 @@ function Coin() {
         <Title>코인ID [{coinId}]</Title>
       </Header>
       <br />
-      <Text coinType=""> 이름 : {state?.name || "loading"}</Text>
-      <Text coinType=""> 순위 : {state?.rank || "loading"}</Text>
-      <Text coinType="">
-        거래 가능 여부 : {state.is_active ? "거래 중" : "거래 중단"}
-      </Text>
-      <Text coinType=""> 타입 : {state?.type || "loading"}</Text>
+      <Text> 이름 : {state?.name || "loading"}</Text>
+      <Text> 순위 : {state?.rank || "loading"}</Text>
+      <Text>거래 가능 여부 : {state?.is_active ? "거래 중" : "거래 중단"}</Text>
+      <Text> 타입 : {state?.type || "loading"}</Text>
     </Container>
   );
 }
